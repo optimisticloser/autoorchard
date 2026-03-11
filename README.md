@@ -66,6 +66,8 @@ This repository starts with:
 - `autoorchard`: a lightweight CLI with:
   - `doctor` — checks local Apple tooling and Cupertino availability
   - `init-lab` — scaffolds a lab with a `program.md`, ledger, scenarios folder, and config
+  - `run-baseline` — runs the baseline experiment path against `Scenarios/manifest.json`
+  - `run-candidate` — runs the candidate experiment path and compares it to the best recorded score
 - example labs for:
   - `SplitReceiptLab`
   - `MusicGenieRankLab`
@@ -109,7 +111,17 @@ This creates:
 - `Config/lab.json`
 - `Ledger/results.tsv`
 - `Scenarios/`
+- `Scenarios/manifest.json`
 - `MutableSurface/README.md`
+
+### Run the first experiment loop
+
+```bash
+swift run autoorchard run-baseline /tmp/ReceiptLab
+swift run autoorchard run-candidate /tmp/ReceiptLab
+```
+
+The first v0.1 runner uses `Scenarios/manifest.json` as a deterministic harness input. Each scenario provides expected metrics plus baseline/candidate measurements so the score contract and ledger path are real before a lab-specific evaluator lands.
 
 ## Example use cases
 

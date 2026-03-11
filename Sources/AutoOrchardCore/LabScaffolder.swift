@@ -23,6 +23,7 @@ public enum LabScaffolder {
         try program.write(to: root.appendingPathComponent("program.md"), atomically: true, encoding: .utf8)
 
         try (Ledger.tsvHeader() + "\n").write(to: root.appendingPathComponent("Ledger/results.tsv"), atomically: true, encoding: .utf8)
+        try defaultScenarioManifest().write(to: root.appendingPathComponent("Scenarios/manifest.json"), atomically: true, encoding: .utf8)
 
         try scenarioREADME(for: kind).write(to: root.appendingPathComponent("Scenarios/README.md"), atomically: true, encoding: .utf8)
         try mutableSurfaceREADME(for: kind).write(to: root.appendingPathComponent("MutableSurface/README.md"), atomically: true, encoding: .utf8)
@@ -81,6 +82,37 @@ public enum LabScaffolder {
         - parser heuristics
 
         Keep the surface small. Elegance comes from bounded change.
+        """
+    }
+
+    private static func defaultScenarioManifest() -> String {
+        """
+        {
+          "version" : 1,
+          "scenarios" : [
+            {
+              "expectedMetrics" : {
+                "fidelity" : 1,
+                "truthfulness" : 1
+              },
+              "id" : "protected-baseline",
+              "notes" : "Replace these measurements with real harness outputs.",
+              "tags" : [
+                "protected"
+              ],
+              "variantMeasurements" : {
+                "baseline" : {
+                  "fidelity" : 0.9,
+                  "truthfulness" : 1
+                },
+                "candidate" : {
+                  "fidelity" : 0.92,
+                  "truthfulness" : 1
+                }
+              }
+            }
+          ]
+        }
         """
     }
 }
