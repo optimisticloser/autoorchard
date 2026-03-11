@@ -154,6 +154,7 @@ So the plan here is:
 
 See:
 
+- [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md)
 - [`docs/vision.md`](docs/vision.md)
 - [`docs/architecture.md`](docs/architecture.md)
 - [`docs/karpathy-comparison.md`](docs/karpathy-comparison.md)
