@@ -1,4 +1,4 @@
-# swift-autolab default program
+# autoorchard default program
 
 This repository is building an Apple-native autonomous experimentation framework.
 

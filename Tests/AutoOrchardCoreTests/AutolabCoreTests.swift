@@ -1,5 +1,5 @@
 import Testing
-@testable import AutolabCore
+@testable import AutoOrchardCore
 
 @Test("ledger emits a stable TSV line")
 func ledgerLineIncludesDecisionAndScore() {

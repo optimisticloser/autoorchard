@@ -1,6 +1,6 @@
 # Vision
 
-`swift-autolab` is an attempt to do for Apple-native AI product pipelines what `autoresearch` did for tiny-model training loops: turn intuition-heavy experimentation into a repeatable, inspectable, fixed-budget system.
+`autoorchard` is an attempt to do for Apple-native AI product pipelines what `autoresearch` did for tiny-model training loops: turn intuition-heavy experimentation into a repeatable, inspectable, fixed-budget system.
 
 ## Thesis
 
@@ -26,7 +26,7 @@ Without a framework like this, product teams end up doing endless back-and-forth
 - forget why a previous version won
 - repeat
 
-With `swift-autolab`, the loop should become:
+With `autoorchard`, the loop should become:
 
 - define the mutation surface
 - define the scenario set

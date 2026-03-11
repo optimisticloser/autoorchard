@@ -1,6 +1,6 @@
 # Cupertino integration
 
-`swift-autolab` treats [Cupertino](https://github.com/mihaelamj/cupertino) as the preferred exact-documentation backend for Apple APIs.
+`autoorchard` treats [Cupertino](https://github.com/mihaelamj/cupertino) as the preferred exact-documentation backend for Apple APIs.
 
 ## Why Cupertino
 

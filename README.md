@@ -1,10 +1,10 @@
-# swift-autolab
+# autoorchard
 
 **Autoresearch for local AI pipelines on Apple platforms.**
 
-`swift-autolab` is a Swift-first framework and CLI for autonomous experimentation on Apple-native AI product pipelines.
+`autoorchard` is a Swift-first framework and CLI for autonomous experimentation on Apple-native AI product pipelines.
 
-Instead of manually bouncing between hunches, prompts, heuristics, OCR tweaks, routing rules, and evaluation spreadsheets, `swift-autolab` turns product experimentation into a disciplined loop:
+Instead of manually bouncing between hunches, prompts, heuristics, OCR tweaks, routing rules, and evaluation spreadsheets, `autoorchard` turns product experimentation into a disciplined loop:
 
 1. change one bounded thing
 2. run a fixed evaluation budget
@@ -32,7 +32,7 @@ It is the endless loop of:
 - compare manually
 - forget why the last version won
 
-`swift-autolab` exists to systematize that loop.
+`autoorchard` exists to systematize that loop.
 
 ## Design principles
 
@@ -56,14 +56,14 @@ This project is meant for things like:
 - local AI planner behavior
 
 ### 5) Exact Apple documentation via Cupertino
-`swift-autolab` treats [Cupertino](https://github.com/mihaelamj/cupertino) as the preferred documentation backend for exact Apple framework lookups. Cupertino is not bundled here, but this project is designed to work alongside it.
+`autoorchard` treats [Cupertino](https://github.com/mihaelamj/cupertino) as the preferred documentation backend for exact Apple framework lookups. Cupertino is not bundled here, but this project is designed to work alongside it.
 
 ## What is in v0
 
 This repository starts with:
 
-- `AutolabCore`: core types for scenarios, evaluators, scores, budgets, ledgers, and mutation plans
-- `swift-autolab`: a lightweight CLI with:
+- `AutoOrchardCore`: core types for scenarios, evaluators, scores, budgets, ledgers, and mutation plans
+- `autoorchard`: a lightweight CLI with:
   - `doctor` — checks local Apple tooling and Cupertino availability
   - `init-lab` — scaffolds a lab with a `program.md`, ledger, scenarios folder, and config
 - example labs for:
@@ -94,13 +94,13 @@ swift build
 ### Check your environment
 
 ```bash
-swift run swift-autolab doctor
+swift run autoorchard doctor
 ```
 
 ### Scaffold a new lab
 
 ```bash
-swift run swift-autolab init-lab /tmp/ReceiptLab receipt-pipeline
+swift run autoorchard init-lab /tmp/ReceiptLab receipt-pipeline
 ```
 
 This creates:
@@ -135,7 +135,7 @@ Because the brilliance of Karpathy's project is mostly in the **structure**, not
 
 `autoresearch-mlx` is excellent proof that fixed-budget autonomous research can run locally on Apple Silicon, but it is still a framework for **model training experiments**.
 
-`swift-autolab` is aimed at a different category:
+`autoorchard` is aimed at a different category:
 
 - product pipelines
 - evaluation harnesses
@@ -165,4 +165,4 @@ See:
 
 Karpathy showed that research can become a disciplined overnight loop.
 
-`swift-autolab` aims to show that **local AI product optimization on Apple platforms** can become that kind of loop too.
+`autoorchard` aims to show that **local AI product optimization on Apple platforms** can become that kind of loop too.

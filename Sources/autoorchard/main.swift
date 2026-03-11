@@ -1,8 +1,8 @@
 import Foundation
-import AutolabCore
+import AutoOrchardCore
 
 @main
-struct SwiftAutolabCLI {
+struct AutoOrchardCLI {
     static func main() throws {
         var args = CommandLine.arguments.dropFirst()
         guard let command = args.first else {
@@ -20,7 +20,7 @@ struct SwiftAutolabCLI {
             }
         case "init-lab":
             guard args.count >= 2 else {
-                fputs("Usage: swift-autolab init-lab <path> <kind> [name]\n", stderr)
+                fputs("Usage: autoorchard init-lab <path> <kind> [name]\n", stderr)
                 Foundation.exit(1)
             }
             let path = String(args[args.startIndex])
@@ -45,7 +45,7 @@ struct SwiftAutolabCLI {
     private static func printHelp() {
         print(
             """
-            swift-autolab
+            autoorchard
 
             Commands:
               doctor                         Check Apple tooling and Cupertino availability

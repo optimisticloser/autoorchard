@@ -1,6 +1,6 @@
 # Split Receipt Lab
 
-The flagship use case for `swift-autolab` is a bounded Apple-native receipt pipeline lab.
+The flagship use case for `autoorchard` is a bounded Apple-native receipt pipeline lab.
 
 ## Fixed surfaces
 

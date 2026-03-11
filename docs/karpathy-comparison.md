@@ -14,7 +14,7 @@ This project is deeply inspired by Andrej Karpathy's `autoresearch`.
 ## What changes for Apple-native pipelines
 
 Karpathy's setup is about training a small model.
-`swift-autolab` is about improving **product pipelines** built with Apple technologies.
+`autoorchard` is about improving **product pipelines** built with Apple technologies.
 
 That means the mutable surface may be:
 
@@ -31,4 +31,4 @@ It is not limited to training loops.
 
 In `autoresearch`, the experiment loop optimizes a model by training it for a fixed time budget.
 
-In `swift-autolab`, the experiment loop optimizes an Apple-native product pipeline by running a fixed set of scenarios and comparing the result to a stable score contract.
+In `autoorchard`, the experiment loop optimizes an Apple-native product pipeline by running a fixed set of scenarios and comparing the result to a stable score contract.

@@ -2,29 +2,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-autolab",
+    name: "autoorchard",
     platforms: [
         .macOS(.v15),
         .iOS(.v18)
     ],
     products: [
-        .library(name: "AutolabCore", targets: ["AutolabCore"]),
-        .executable(name: "swift-autolab", targets: ["swift-autolab"])
+        .library(name: "AutoOrchardCore", targets: ["AutoOrchardCore"]),
+        .executable(name: "autoorchard", targets: ["autoorchard"])
     ],
     targets: [
         .target(
-            name: "AutolabCore",
-            path: "Sources/AutolabCore"
+            name: "AutoOrchardCore",
+            path: "Sources/AutoOrchardCore"
         ),
         .executableTarget(
-            name: "swift-autolab",
-            dependencies: ["AutolabCore"],
-            path: "Sources/swift-autolab"
+            name: "autoorchard",
+            dependencies: ["AutoOrchardCore"],
+            path: "Sources/autoorchard"
         ),
         .testTarget(
-            name: "AutolabCoreTests",
-            dependencies: ["AutolabCore"],
-            path: "Tests/AutolabCoreTests"
+            name: "AutoOrchardCoreTests",
+            dependencies: ["AutoOrchardCore"],
+            path: "Tests/AutoOrchardCoreTests"
         )
     ]
 )
